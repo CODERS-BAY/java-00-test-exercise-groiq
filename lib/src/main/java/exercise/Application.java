@@ -7,11 +7,11 @@ public class Application {
 	}
 
 	public static boolean evalExpression(boolean x, boolean y) {
-		return x && y;
+		return ((x || y) && !(x && y) );
 	}
 
 	public static void printArray(int[] numbers) {
-		for (int i = 0; i < numbers.length + 1; i++) {
+		for (int i = 0; i < numbers.length; i++) {
 			System.out.println(numbers[i]);
 		}
 	}
