@@ -13,7 +13,11 @@ class ApplicationTest {
 
 	@Test
 	void testEvalExpression() {
+		// let's just say that this is supposed to be an XOR...
+		assertFalse(Application.evalExpression(false, false));
 		assertTrue(Application.evalExpression(true, false));
+		assertTrue(Application.evalExpression(false, true));
+		assertFalse(Application.evalExpression(true, true));
 	}
 
 	@Test
